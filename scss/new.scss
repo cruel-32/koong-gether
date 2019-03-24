@@ -1,5 +1,7 @@
 $mainColor:#6441a5;
 
+
+
 html,body {
     background:#7d629c;
 }
@@ -10,6 +12,18 @@ body {
     > header {
         .container {
             width: 1200px;
+            .col-xs-4{
+                a {
+                    display:block;
+                    background:url(//upload.tgd.kr/20190324/53cc49414736f5e754e2f823499d6a9d.png) no-repeat center center;
+                    background-size:cover;
+                    width:204px;
+                    height:50px;
+                    img {
+                        display:none;
+                    }
+                }
+            }
         }
         #header-bar {
             > .row {
@@ -28,6 +42,19 @@ body {
                     #board-info {
                         padding-left:7.5em;
                         height: auto;
+                        #viewers-area {
+                            .fa {
+                                &:before {
+                                    color:$mainColor;
+                                }
+                            }
+                            #viewers {
+                                color:$mainColor;
+                            }
+                        }
+                        .badge {
+                            background:$mainColor;
+                        }
                         #board-info-profile-img {
                             width:5em;
                             position: absolute;

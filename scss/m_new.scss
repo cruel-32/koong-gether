@@ -44,6 +44,14 @@ body {
                     }
                 }
             }
+
+            > a {
+                > h1 {
+                    display:inline-block;
+                    background:url(//upload.tgd.kr/20190324/53cc49414736f5e754e2f823499d6a9d.png) no-repeat center center;
+                    background-size:cover;
+                }
+            }
         }
     }
     footer {
@@ -78,7 +86,7 @@ body {
                     }
                 }
                 .badge {
-                    background:#6441a5;
+                    background:$mainColor;
                 }
             }
             #article-list {
