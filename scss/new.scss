@@ -1,14 +1,114 @@
+$mainColor:#6441a5;
+
+html,body {
+    background:#7d629c;
+}
 body {
+    .btn-primary {
+        background-color: $mainColor;
+    }
     > header {
         .container {
-
+            width: 1200px;
         }
         #header-bar {
-
+            > .row {
+                border:5px solid $mainColor;
+            }
         }
     }
 
     #content-area {
-        
+        .container {
+            width: 1200px;
+            #main-content {
+                .frame {
+                    border:2px solid #000;
+                    margin: auto;
+                    #board-info {
+                        padding-left:7.5em;
+                        height: auto;
+                        #board-info-profile-img {
+                            width:5em;
+                            position: absolute;
+                            top:14px;
+                            left:34px;
+                            transform-origin:50% 50%;
+                            animation:rotation 1s infinite alternate ease-in-out;
+                        }
+                    }
+                    
+                    .adsbygoogle {
+                        text-align: center;
+                    }
+                    #board-info-bottom {
+                        padding:4px 0;
+                        a {
+                            font-size:14px;
+                        }
+                    }
+                    #article-list {
+                        #article-list-menu {
+                            > .btn.best {
+                                color:#ea2121;
+                                border-color:#ea2121;
+                            }
+                        }
+                        #article-list-category {
+                            background:$mainColor;
+                            border:none;
+                            text-align: left;
+                            .nav-link {
+                                position: relative;
+                                font-size:16px;
+                                background-color: transparent;
+                                color:#ded5e8 !important;
+                                &:hover {
+                                    color:#fff !important;
+                                    background-color: #000;
+                                }
+                                &.active {
+                                    color:#fff !important;
+                                    background-color: #000;
+                                }
+                            }
+                        }
+                        #article-option-area {
+                            top:0;
+                            right:14px;
+                        }
+                    }
+                }
+            }
+        }
+        .menu-wrapper {
+            border: 2px solid #000;
+        }
+
+       
+    }
+    footer {
+        .container {
+            span {
+                a {
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes rotation {
+    0% {
+        transform:rotate(20deg) scale(1.1);
+    }
+
+    50% {
+        transform:rotate(0deg) scale(1.0);
+    }
+
+    100% {
+        transform:rotate(-20deg) scale(1.1);
     }
 }

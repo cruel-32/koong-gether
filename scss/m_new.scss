@@ -1,0 +1,131 @@
+$mainColor:#6441a5;
+
+html, body {
+    background: $mainColor;
+}
+
+body {
+
+    #article-list-menu {
+        > .btn.best {
+            color:#ea2121;
+            border-color:#ea2121;
+        }
+    }
+
+    .btn-primary {
+        background-color: $mainColor;
+    }
+    header {
+        background:$mainColor;
+        border-bottom: 4px solid #000;
+        #header-search-bar {
+            #header-search-input {
+                outline:none;
+            }
+            .fa {
+                &:before {
+                    color:#fff;
+                }
+            }
+        }
+        #header-area {
+            #header-bar-link {
+                .fa {
+                    &:before {
+                        color:#fff;
+                    }
+                }
+            }
+            #header-search-link {
+                .fa {
+                    &:before {
+                        color:#fff;
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        background: #927abf;
+        .container {
+            span {
+                color:#111;
+                a {
+                    color:#444;
+                }
+            }
+        }
+    }
+    #header-top-notice {
+        background: #927abf;
+    }
+
+    #main-content {
+        .frame {
+            background: #927abf;
+
+            #board-info {
+                background: #927abf;
+                #viewers-area {
+                    .fa {
+                        &:before {
+                            color:#fff;
+                        }
+                    }
+                    #viewers {
+                        color:#fff;
+                    }
+                }
+                .badge {
+                    background:#6441a5;
+                }
+            }
+            #article-list {
+                #article-list-category {
+                    background:$mainColor;
+                    border:none;
+                    text-align: left;
+                    .nav-link {
+                        position: relative;
+                        font-size:16px;
+                        background-color: transparent;
+                        color:#ded5e8 !important;
+                        &:hover {
+                            color:#fff !important;
+                            background-color: #000;
+                        }
+                        &.active {
+                            color:#fff !important;
+                            background-color: #000;
+                        }
+                    }
+                }
+                #article-option-area {
+                    top:0;
+                    right:0px;
+                }
+            }
+        }
+    }
+
+    nav#nav {
+        background: #927abf;
+        .fa {
+            &:before {
+                color:#fff;
+            }
+        }
+        > #nav-schedule-list {
+            a.schedule-link {
+                > .time {
+                    color:#fff;
+                }
+            }
+            > a {
+                border-bottom:1px solid #000;
+            }
+        }
+
+    }
+}

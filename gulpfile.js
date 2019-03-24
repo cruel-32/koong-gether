@@ -8,10 +8,9 @@ const
     origin = "scss",
     project = "./";
 
-const css = () => src([`${origin}/**/*.{scss,sass}`,`!${origin}/import/**/*.{scss,sass}`], {since: lastRun(css)})
+const css = () => src([`${origin}/*.{scss,sass}`], {since: lastRun(css)})
     .pipe(sass.sync().on('error', sass.logError))
     // .pipe(sass().on('error', sass.logError))
-    .pipe(src([`${origin}/**/*.css`,`!${origin}/_icons.css`]), {passthrough: true})
     .pipe(autoprefixer())
     .pipe(csscomb({
         configPath: 'hint/.csscomb.json'
@@ -37,7 +36,7 @@ const browserSyncInit = (done)=>{
 }
 
 const watcher = () => {
-    watch([`${origin}/**/*.{scss,sass.css}`], css).on('change', browsersync.reload);
+    watch([`${origin}/*.{scss,sass.css}`], css).on('change', browsersync.reload);
 }
 
 exports.default = series(css, parallel(browserSyncInit, watcher) );
